@@ -2,29 +2,24 @@ import { useFormContext } from "react-hook-form";
 import { IPowerSupplyForm } from "../types/form";
 
 type ImageUploadProps = {
-  name: keyof IPowerSupplyForm;
-  label: string;
+    name: keyof IPowerSupplyForm;
+    label: string;
 };
 
 const ImageUpload = ({ name, label }: ImageUploadProps) => {
-  const { register, watch } = useFormContext();
+    const { register } = useFormContext();
 
-  const currentVal = watch(name);
-
-  console.log(currentVal);
-  console.log(typeof currentVal);
-
-  return (
-    <div className="picture-upload">
-      <label htmlFor={name}>{label}</label>
-      <input
-        className="picture-upload__input"
-        id={name}
-        {...register(name)}
-        type="file"
-        multiple={false}
-      />
-    </div>
-  );
+    return (
+        <div className="picture-upload">
+            <label htmlFor={name}>{label}</label>
+            <input
+                className="picture-upload__input"
+                id={name}
+                {...register(name)}
+                type="file"
+                multiple={false}
+            />
+        </div>
+    );
 };
 export default ImageUpload;
