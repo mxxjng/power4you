@@ -1,11 +1,12 @@
 import { useFormContext } from "react-hook-form";
+import { IPowerSupplyForm } from "../types/form";
 
 type FormInputProps = React.DetailedHTMLProps<
   React.InputHTMLAttributes<HTMLInputElement>,
   HTMLInputElement
 > & {
   label?: string;
-  name: string;
+  name: keyof IPowerSupplyForm;
   type?: string;
   required?: boolean;
   disabled?: boolean;
@@ -33,7 +34,7 @@ const FormInput = ({
       )}
       <input
         {...register(name)}
-        className={`${errors[name] && "input__field--error"} input__field`}
+        className={`${errors[name] ? "input__field--error" : ""} input__field`}
         {...rest}
       />
       {errors[name] && (
