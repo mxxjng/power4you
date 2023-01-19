@@ -1,12 +1,7 @@
-import { joiResolver } from "@hookform/resolvers/joi";
 import { useState } from "react";
-import { useForm, SubmitHandler, FormProvider } from "react-hook-form";
-import {
-    FormEnum,
-    FormState,
-    IPowerSupplyForm,
-    powerSupplyFormSchema,
-} from "../types/form";
+import { joiResolver } from "@hookform/resolvers/joi";
+import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
+
 import Button from "./Button";
 import FormInput from "./FormInput";
 import Ticket from "./Icons/Ticket";
@@ -14,6 +9,13 @@ import ImageUpload from "./ImageUpload";
 import RadioGroup from "./RadioGroup";
 import Slider from "./Slider";
 import SuccessContainer from "./SuccessContainer";
+
+import {
+    FormEnum,
+    FormState,
+    IPowerSupplyForm,
+    powerSupplyFormSchema,
+} from "../types/form";
 
 const defaultValues: IPowerSupplyForm = {
     name: "",

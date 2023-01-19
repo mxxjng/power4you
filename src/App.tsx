@@ -5,7 +5,7 @@ function App() {
     return (
         <div className="phone-simulator">
             <div className="page-title">
-                <h2>Problem Ticket</h2>
+                <h3>Problem Ticket</h3>
                 <p className="p-1 p-1--primary">Power Supply</p>
             </div>
             <div className="ticket-container">

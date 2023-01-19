@@ -1,4 +1,5 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
+
 import Spinner from "./Spinner";
 
 export type ButtonProps = DetailedHTMLProps<

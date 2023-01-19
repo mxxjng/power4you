@@ -1,4 +1,5 @@
 import { useFormContext } from "react-hook-form";
+
 import { IPowerSupplyForm } from "../types/form";
 
 type SliderProps = {

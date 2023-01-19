@@ -58,6 +58,7 @@ html {
     border: 1px solid var(--headline-color);
     border-radius: 5px;
     padding: var(--gap-medium);
+    overflow-y: auto;
 }
 
 .page-title {
@@ -246,8 +247,7 @@ input[type="radio"] {
 .slider__input {
     width: 100%;
     margin-top: var(--gap-tiny);
-    background-color: var(--outline-color); /* Otherwise white in Chrome */
-    color: var(--primary-color); /* Otherwise white in Chrome */
+    accent-color: var(--primary-color);
 }
 
 /* Picture upload styling */
@@ -255,8 +255,52 @@ input[type="radio"] {
     margin-bottom: var(--gap-large);
 }
 
-.picture-upload__input {
+.picture-upload__text {
+    color: var(--outline-color);
+    font-size: var(--size-p2);
+    max-width: 165px;
+    margin: var(--gap-tiny) auto;
+}
+
+.picture-upload__container {
     margin-top: var(--gap-tiny);
+    text-align: center;
+    padding: var(--gap-medium);
+    border-radius: var(--border-radius-small);
+}
+
+.picture-upload__container--active {
+    border: 1px dashed var(--outline-color);
+}
+
+.picture-upload__input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.picture-upload__input + label {
+    font-size: var(--size-p2);
+    color: white;
+    background-color: var(--primary-color);
+    display: inline-block;
+    padding: var(--gap-tiny);
+    border-radius: var(--border-radius-small);
+}
+
+.picture-upload__filename {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.picture-upload__file {
+    font-size: var(--size-p);
 }
 
 /* Success container styling */
